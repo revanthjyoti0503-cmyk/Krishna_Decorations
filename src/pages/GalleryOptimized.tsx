@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, Camera, Filter, Plus, Minus, RotateCcw, RotateCw, RefreshCcw } from 'lucide-react';
 import { useSearchParams } from 'react-router-dom';
 import { 
-  portfolioImages, 
+  activePortfolioImages as portfolioImages, 
   getAllCategories,
   type ImageData 
 } from '../utils/imageData';
@@ -349,14 +349,6 @@ const GalleryOptimized: React.FC = () => {
                   <div className="bg-amber-400 text-black px-3 py-1 rounded-full text-sm font-medium inline-block">
                     {portfolioImages[selectedImage].category}
                   </div>
-                  <div className="text-white font-semibold text-lg">
-                    {portfolioImages[selectedImage].alt}
-                  </div>
-                  {portfolioImages[selectedImage].description && (
-                    <div className="text-gray-200 text-sm">
-                      {portfolioImages[selectedImage].description}
-                    </div>
-                  )}
                   <div className="text-xs text-gray-300 ml-2">
                     {selectedImage + 1} of {filteredImages.length}
                   </div>

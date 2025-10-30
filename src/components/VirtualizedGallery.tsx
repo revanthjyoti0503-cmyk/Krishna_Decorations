@@ -67,24 +67,15 @@ const VirtualizedGallery: React.FC<VirtualizedGalleryProps> = ({
                 {image.category}
               </div>
               
-              {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                  <h3 className="font-semibold text-sm mb-1 line-clamp-2">{image.alt}</h3>
-                  {image.description && (
-                    <p className="text-xs text-gray-200 line-clamp-2">{image.description}</p>
-                  )}
-                </div>
-              </div>
+              {/* Hover Overlay (no title/description) */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             
-            {/* Image Info - Always Visible Below Image */}
+            {/* Image Info - Keep layout, remove image name */}
             <div className="p-3">
               <div className="flex items-center justify-between">
                 <div className="flex-1 min-w-0">
-                  <h4 className="font-medium text-sm text-gray-900 dark:text-white truncate">
-                    {image.alt}
-                  </h4>
+                  <div className="h-5" />
                   <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
                     {image.category}
                   </p>

@@ -6,63 +6,6 @@ export interface ImageData {
   description?: string;
 }
 
-export const BabyshowerImages: ImageData[] = [
-  {
-    "src": "/images/Baby shower/Screenshot_20250523-143251.Instagram.png",
-    "alt": "Screenshot_20250523-143251.Instagram",
-    "category": "Baby shower",
-    "description": "Screenshot_20250523-143251.Instagram.png from Baby shower"
-  },
-  {
-    "src": "/images/Baby shower/Screenshot_20250523-143328.Instagram.png",
-    "alt": "Screenshot_20250523-143328.Instagram",
-    "category": "Baby shower",
-    "description": "Screenshot_20250523-143328.Instagram.png from Baby shower"
-  },
-  {
-    "src": "/images/Baby shower/Screenshot_20250523-143624.Instagram.png",
-    "alt": "Screenshot_20250523-143624.Instagram",
-    "category": "Baby shower",
-    "description": "Screenshot_20250523-143624.Instagram.png from Baby shower"
-  },
-  {
-    "src": "/images/Baby shower/Screenshot_20250523-144205.Instagram.png",
-    "alt": "Screenshot_20250523-144205.Instagram",
-    "category": "Baby shower",
-    "description": "Screenshot_20250523-144205.Instagram.png from Baby shower"
-  },
-  {
-    "src": "/images/Baby shower/Screenshot_20250523-144220.Instagram.png",
-    "alt": "Screenshot_20250523-144220.Instagram",
-    "category": "Baby shower",
-    "description": "Screenshot_20250523-144220.Instagram.png from Baby shower"
-  },
-  {
-    "src": "/images/Baby shower/Screenshot_20250523-144550.Instagram.png",
-    "alt": "Screenshot_20250523-144550.Instagram",
-    "category": "Baby shower",
-    "description": "Screenshot_20250523-144550.Instagram.png from Baby shower"
-  },
-  {
-    "src": "/images/Baby shower/Screenshot_20250523-144816.Instagram.png",
-    "alt": "Screenshot_20250523-144816.Instagram",
-    "category": "Baby shower",
-    "description": "Screenshot_20250523-144816.Instagram.png from Baby shower"
-  },
-  {
-    "src": "/images/Baby shower/Screenshot_20250523-144922.Instagram.png",
-    "alt": "Screenshot_20250523-144922.Instagram",
-    "category": "Baby shower",
-    "description": "Screenshot_20250523-144922.Instagram.png from Baby shower"
-  },
-  {
-    "src": "/images/Baby shower/Screenshot_20250523-145111.Instagram.png",
-    "alt": "Screenshot_20250523-145111.Instagram",
-    "category": "Baby shower",
-    "description": "Screenshot_20250523-145111.Instagram.png from Baby shower"
-  }
-];
-
 export const BirthdayImages: ImageData[] = [
   {
     "src": "/images/Birthday/IMG-20231120-WA0007.jpg",
@@ -99,252 +42,6 @@ export const BirthdayImages: ImageData[] = [
     "alt": "IMG-20241106-WA0055",
     "category": "Birthday",
     "description": "IMG-20241106-WA0055.jpg from Birthday"
-  },
-  {
-    "src": "/images/Birthday/Screenshot_20241117-192814.png",
-    "alt": "Screenshot_20241117-192814",
-    "category": "Birthday",
-    "description": "Screenshot_20241117-192814.png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/Screenshot_20241117-193022.png",
-    "alt": "Screenshot_20241117-193022",
-    "category": "Birthday",
-    "description": "Screenshot_20241117-193022.png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/Screenshot_20241117-193036.png",
-    "alt": "Screenshot_20241117-193036",
-    "category": "Birthday",
-    "description": "Screenshot_20241117-193036.png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/Screenshot_20241117-195254.png",
-    "alt": "Screenshot_20241117-195254",
-    "category": "Birthday",
-    "description": "Screenshot_20241117-195254.png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/Screenshot_20241117-195436.png",
-    "alt": "Screenshot_20241117-195436",
-    "category": "Birthday",
-    "description": "Screenshot_20241117-195436.png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/Screenshot_20241117-195632.png",
-    "alt": "Screenshot_20241117-195632",
-    "category": "Birthday",
-    "description": "Screenshot_20241117-195632.png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/Screenshot_20241117-195651.png",
-    "alt": "Screenshot_20241117-195651",
-    "category": "Birthday",
-    "description": "Screenshot_20241117-195651.png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/Screenshot_20241117-195716.png",
-    "alt": "Screenshot_20241117-195716",
-    "category": "Birthday",
-    "description": "Screenshot_20241117-195716.png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/Screenshot_20241117-195743.png",
-    "alt": "Screenshot_20241117-195743",
-    "category": "Birthday",
-    "description": "Screenshot_20241117-195743.png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/Screenshot_20241117-195829.png",
-    "alt": "Screenshot_20241117-195829",
-    "category": "Birthday",
-    "description": "Screenshot_20241117-195829.png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/Screenshot_20241117-195856.png",
-    "alt": "Screenshot_20241117-195856",
-    "category": "Birthday",
-    "description": "Screenshot_20241117-195856.png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(1).png",
-    "alt": "__(1)",
-    "category": "Birthday",
-    "description": "__(1).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(10).png",
-    "alt": "__(10)",
-    "category": "Birthday",
-    "description": "__(10).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(11).png",
-    "alt": "__(11)",
-    "category": "Birthday",
-    "description": "__(11).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(12).png",
-    "alt": "__(12)",
-    "category": "Birthday",
-    "description": "__(12).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(13).png",
-    "alt": "__(13)",
-    "category": "Birthday",
-    "description": "__(13).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(14).png",
-    "alt": "__(14)",
-    "category": "Birthday",
-    "description": "__(14).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(15).png",
-    "alt": "__(15)",
-    "category": "Birthday",
-    "description": "__(15).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(16).png",
-    "alt": "__(16)",
-    "category": "Birthday",
-    "description": "__(16).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(17).png",
-    "alt": "__(17)",
-    "category": "Birthday",
-    "description": "__(17).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(18).png",
-    "alt": "__(18)",
-    "category": "Birthday",
-    "description": "__(18).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(19).png",
-    "alt": "__(19)",
-    "category": "Birthday",
-    "description": "__(19).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(2).png",
-    "alt": "__(2)",
-    "category": "Birthday",
-    "description": "__(2).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(20).png",
-    "alt": "__(20)",
-    "category": "Birthday",
-    "description": "__(20).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(21).png",
-    "alt": "__(21)",
-    "category": "Birthday",
-    "description": "__(21).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(22).png",
-    "alt": "__(22)",
-    "category": "Birthday",
-    "description": "__(22).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(23).png",
-    "alt": "__(23)",
-    "category": "Birthday",
-    "description": "__(23).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(24).png",
-    "alt": "__(24)",
-    "category": "Birthday",
-    "description": "__(24).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(25).png",
-    "alt": "__(25)",
-    "category": "Birthday",
-    "description": "__(25).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(26).png",
-    "alt": "__(26)",
-    "category": "Birthday",
-    "description": "__(26).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(27).png",
-    "alt": "__(27)",
-    "category": "Birthday",
-    "description": "__(27).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(28).png",
-    "alt": "__(28)",
-    "category": "Birthday",
-    "description": "__(28).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(29).png",
-    "alt": "__(29)",
-    "category": "Birthday",
-    "description": "__(29).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(3).png",
-    "alt": "__(3)",
-    "category": "Birthday",
-    "description": "__(3).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(30).png",
-    "alt": "__(30)",
-    "category": "Birthday",
-    "description": "__(30).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(4).png",
-    "alt": "__(4)",
-    "category": "Birthday",
-    "description": "__(4).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(5).png",
-    "alt": "__(5)",
-    "category": "Birthday",
-    "description": "__(5).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(6).png",
-    "alt": "__(6)",
-    "category": "Birthday",
-    "description": "__(6).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(7).png",
-    "alt": "__(7)",
-    "category": "Birthday",
-    "description": "__(7).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(8).png",
-    "alt": "__(8)",
-    "category": "Birthday",
-    "description": "__(8).png from Birthday"
-  },
-  {
-    "src": "/images/Birthday/__(9).png",
-    "alt": "__(9)",
-    "category": "Birthday",
-    "description": "__(9).png from Birthday"
   }
 ];
 
@@ -458,22 +155,10 @@ export const engagementImages: ImageData[] = [
     "description": "__(1).jpg from engagement"
   },
   {
-    "src": "/images/engagement/__(1).png",
-    "alt": "__(1)",
-    "category": "engagement",
-    "description": "__(1).png from engagement"
-  },
-  {
     "src": "/images/engagement/__(2).jpg",
     "alt": "__(2)",
     "category": "engagement",
     "description": "__(2).jpg from engagement"
-  },
-  {
-    "src": "/images/engagement/__(2).png",
-    "alt": "__(2)",
-    "category": "engagement",
-    "description": "__(2).png from engagement"
   },
   {
     "src": "/images/engagement/__(3).jpg",
@@ -482,34 +167,16 @@ export const engagementImages: ImageData[] = [
     "description": "__(3).jpg from engagement"
   },
   {
-    "src": "/images/engagement/__(3).png",
-    "alt": "__(3)",
-    "category": "engagement",
-    "description": "__(3).png from engagement"
-  },
-  {
     "src": "/images/engagement/__(4).jpg",
     "alt": "__(4)",
     "category": "engagement",
     "description": "__(4).jpg from engagement"
   },
   {
-    "src": "/images/engagement/__(4).png",
-    "alt": "__(4)",
-    "category": "engagement",
-    "description": "__(4).png from engagement"
-  },
-  {
     "src": "/images/engagement/__.jpg",
     "alt": "__",
     "category": "engagement",
     "description": "__.jpg from engagement"
-  },
-  {
-    "src": "/images/engagement/__.png",
-    "alt": "__",
-    "category": "engagement",
-    "description": "__.png from engagement"
   }
 ];
 
@@ -833,58 +500,10 @@ export const HaldiImages: ImageData[] = [
     "description": "IMG-20231203-WA0038.jpg from Haldi"
   },
   {
-    "src": "/images/Haldi/Screenshot_20240621-185418.png",
-    "alt": "Screenshot_20240621-185418",
-    "category": "Haldi",
-    "description": "Screenshot_20240621-185418.png from Haldi"
-  },
-  {
-    "src": "/images/Haldi/Screenshot_20241001-003338.png",
-    "alt": "Screenshot_20241001-003338",
-    "category": "Haldi",
-    "description": "Screenshot_20241001-003338.png from Haldi"
-  },
-  {
-    "src": "/images/Haldi/Screenshot_20241009-234618.png",
-    "alt": "Screenshot_20241009-234618",
-    "category": "Haldi",
-    "description": "Screenshot_20241009-234618.png from Haldi"
-  },
-  {
-    "src": "/images/Haldi/Screenshot_20241117-192849.png",
-    "alt": "Screenshot_20241117-192849",
-    "category": "Haldi",
-    "description": "Screenshot_20241117-192849.png from Haldi"
-  },
-  {
-    "src": "/images/Haldi/__(1).png",
-    "alt": "__(1)",
-    "category": "Haldi",
-    "description": "__(1).png from Haldi"
-  },
-  {
-    "src": "/images/Haldi/__(2).png",
-    "alt": "__(2)",
-    "category": "Haldi",
-    "description": "__(2).png from Haldi"
-  },
-  {
-    "src": "/images/Haldi/__(3).png",
-    "alt": "__(3)",
-    "category": "Haldi",
-    "description": "__(3).png from Haldi"
-  },
-  {
     "src": "/images/Haldi/__.jpg",
     "alt": "__",
     "category": "Haldi",
     "description": "__.jpg from Haldi"
-  },
-  {
-    "src": "/images/Haldi/__.png",
-    "alt": "__",
-    "category": "Haldi",
-    "description": "__.png from Haldi"
   }
 ];
 
@@ -984,12 +603,6 @@ export const MiravnukImages: ImageData[] = [
     "alt": "IMG_20241003_194518930_HDR",
     "category": "Miravnuk",
     "description": "IMG_20241003_194518930_HDR.jpg from Miravnuk"
-  },
-  {
-    "src": "/images/Miravnuk/__.png",
-    "alt": "__",
-    "category": "Miravnuk",
-    "description": "__.png from Miravnuk"
   }
 ];
 
@@ -1043,22 +656,10 @@ export const NaamKaranImages: ImageData[] = [
     "description": "IMG-20241015-WA0007.jpg from Naam Karan"
   },
   {
-    "src": "/images/Naam Karan/__(1).png",
-    "alt": "__(1)",
-    "category": "Naam Karan",
-    "description": "__(1).png from Naam Karan"
-  },
-  {
     "src": "/images/Naam Karan/__.jpg",
     "alt": "__",
     "category": "Naam Karan",
     "description": "__.jpg from Naam Karan"
-  },
-  {
-    "src": "/images/Naam Karan/__.png",
-    "alt": "__",
-    "category": "Naam Karan",
-    "description": "__.png from Naam Karan"
   }
 ];
 
@@ -1070,40 +671,10 @@ export const SelfiepointsImages: ImageData[] = [
     "description": "IMG_20250518_130613931_HDR_AE.jpg from Selfie points"
   },
   {
-    "src": "/images/Selfie points/__(1).png",
-    "alt": "__(1)",
-    "category": "Selfie points",
-    "description": "__(1).png from Selfie points"
-  },
-  {
-    "src": "/images/Selfie points/__(2).png",
-    "alt": "__(2)",
-    "category": "Selfie points",
-    "description": "__(2).png from Selfie points"
-  },
-  {
-    "src": "/images/Selfie points/__(3).png",
-    "alt": "__(3)",
-    "category": "Selfie points",
-    "description": "__(3).png from Selfie points"
-  },
-  {
-    "src": "/images/Selfie points/__(4).png",
-    "alt": "__(4)",
-    "category": "Selfie points",
-    "description": "__(4).png from Selfie points"
-  },
-  {
     "src": "/images/Selfie points/__.jpg",
     "alt": "__",
     "category": "Selfie points",
     "description": "__.jpg from Selfie points"
-  },
-  {
-    "src": "/images/Selfie points/__.png",
-    "alt": "__",
-    "category": "Selfie points",
-    "description": "__.png from Selfie points"
   }
 ];
 
@@ -1226,12 +797,6 @@ export const weddingImages: ImageData[] = [
     "description": "IMG_20240630_003430879_HDR_AE.jpg from wedding"
   },
   {
-    "src": "/images/wedding/Mi.png",
-    "alt": "Mi",
-    "category": "wedding",
-    "description": "Mi.png from wedding"
-  },
-  {
     "src": "/images/wedding/__(1).jpg",
     "alt": "__(1)",
     "category": "wedding",
@@ -1256,105 +821,14 @@ export const weddingImages: ImageData[] = [
     "description": "__(4).jpg from wedding"
   },
   {
-    "src": "/images/wedding/__(52).png",
-    "alt": "__(52)",
-    "category": "wedding",
-    "description": "__(52).png from wedding"
-  },
-  {
-    "src": "/images/wedding/__(53).png",
-    "alt": "__(53)",
-    "category": "wedding",
-    "description": "__(53).png from wedding"
-  },
-  {
-    "src": "/images/wedding/__(54).png",
-    "alt": "__(54)",
-    "category": "wedding",
-    "description": "__(54).png from wedding"
-  },
-  {
-    "src": "/images/wedding/__(55).png",
-    "alt": "__(55)",
-    "category": "wedding",
-    "description": "__(55).png from wedding"
-  },
-  {
-    "src": "/images/wedding/__(56).png",
-    "alt": "__(56)",
-    "category": "wedding",
-    "description": "__(56).png from wedding"
-  },
-  {
-    "src": "/images/wedding/__(57).png",
-    "alt": "__(57)",
-    "category": "wedding",
-    "description": "__(57).png from wedding"
-  },
-  {
-    "src": "/images/wedding/__(58).png",
-    "alt": "__(58)",
-    "category": "wedding",
-    "description": "__(58).png from wedding"
-  },
-  {
-    "src": "/images/wedding/__(59).png",
-    "alt": "__(59)",
-    "category": "wedding",
-    "description": "__(59).png from wedding"
-  },
-  {
-    "src": "/images/wedding/__(60).png",
-    "alt": "__(60)",
-    "category": "wedding",
-    "description": "__(60).png from wedding"
-  },
-  {
-    "src": "/images/wedding/__(61).png",
-    "alt": "__(61)",
-    "category": "wedding",
-    "description": "__(61).png from wedding"
-  },
-  {
-    "src": "/images/wedding/__(62).png",
-    "alt": "__(62)",
-    "category": "wedding",
-    "description": "__(62).png from wedding"
-  },
-  {
-    "src": "/images/wedding/__(63).png",
-    "alt": "__(63)",
-    "category": "wedding",
-    "description": "__(63).png from wedding"
-  },
-  {
-    "src": "/images/wedding/__(64).png",
-    "alt": "__(64)",
-    "category": "wedding",
-    "description": "__(64).png from wedding"
-  },
-  {
-    "src": "/images/wedding/__(65).png",
-    "alt": "__(65)",
-    "category": "wedding",
-    "description": "__(65).png from wedding"
-  },
-  {
     "src": "/images/wedding/__.jpg",
     "alt": "__",
     "category": "wedding",
     "description": "__.jpg from wedding"
-  },
-  {
-    "src": "/images/wedding/__.png",
-    "alt": "__",
-    "category": "wedding",
-    "description": "__.png from wedding"
   }
 ];
 
 export const portfolioImages: ImageData[] = [
-  ...BabyshowerImages,
   ...BirthdayImages,
   ...engagementImages,
   ...HaldiImages,
@@ -1367,16 +841,21 @@ export const portfolioImages: ImageData[] = [
 
 // Slideshow images (selecting best from each category)
 export const slideshowImages: ImageData[] = [
-  BabyshowerImages[0],
   BirthdayImages[0],
   engagementImages[0],
   HaldiImages[0],
-  NaamKaranImages[0],
   MiravnukImages[0],
+  NaamKaranImages[0],
   SelfiepointsImages[0],
   toranImages[0],
   weddingImages[0]
 ].filter(Boolean);
+
+// Exclude categories globally (e.g., remove "Baby shower" everywhere)
+export const EXCLUDED_CATEGORIES = new Set<string>(['Baby shower']);
+
+export const activePortfolioImages: ImageData[] = portfolioImages.filter(img => !EXCLUDED_CATEGORIES.has(img.category));
+export const activeSlideshowImages: ImageData[] = slideshowImages.filter(img => !EXCLUDED_CATEGORIES.has(img.category));
 
 // Fallback images for when local images are not available
 export const fallbackImages: ImageData[] = [
@@ -1423,13 +902,13 @@ export const fallbackSlideshowImages: ImageData[] = [
 
 // Get all unique categories
 export const getAllCategories = (): string[] => {
-  const categories = new Set(portfolioImages.map(img => img.category));
+  const categories = new Set(activePortfolioImages.map(img => img.category));
   return Array.from(categories).sort();
 };
 
 // Get categories sorted by image count (most images first)
 export const getCategoriesByCount = () => {
-  const categoryCounts = portfolioImages.reduce((acc, img) => {
+  const categoryCounts = activePortfolioImages.reduce((acc, img) => {
     acc[img.category] = (acc[img.category] || 0) + 1;
     return acc;
   }, {} as Record<string, number>);

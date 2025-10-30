@@ -3,16 +3,18 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight, Camera, Sparkles, Play, Pause, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { 
-  slideshowImages, 
-  portfolioImages, 
+  activeSlideshowImages as slideshowImages, 
+  activePortfolioImages as portfolioImages, 
   fallbackSlideshowImages, 
   fallbackImages,
   getAllCategories
-} from '../../utils/imageData';
+ } from '../../utils/imageData';
+import { encodeImagePath } from '../../utils/imageLoader';
 
 const Gallery: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [slideAspect, setSlideAspect] = useState<string | null>(null);
   const [isPlaying, setIsPlaying] = useState(true);
   const navigate = useNavigate();
 
@@ -55,6 +57,24 @@ const Gallery: React.FC = () => {
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + slideshowData.length) % slideshowData.length);
   };
+
+  // Reset aspect when slide changes to allow recalculation on image load
+  useEffect(() => {
+    setSlideAspect(null);
+  }, [currentSlide]);
+
+  // Pre-compute aspect ratio when slide changes to avoid layout jump/letterboxing
+  useEffect(() => {
+    const src = slideshowData[currentSlide]?.src;
+    if (!src) return;
+    const img = new Image();
+    img.onload = () => {
+      if (img.naturalWidth && img.naturalHeight) {
+        setSlideAspect(`${img.naturalWidth} / ${img.naturalHeight}`);
+      }
+    };
+    img.src = encodeImagePath(src);
+  }, [currentSlide, slideshowData]);
 
   const nextImage = () => {
     setSelectedImage((prev) => (prev !== null ? (prev + 1) % portfolioData.length : 0));
@@ -136,8 +156,11 @@ const Gallery: React.FC = () => {
             </motion.p>
           </motion.div>
 
-          {/* Slideshow Container */}
-          <div className="relative w-full h-[500px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+          {/* Slideshow Container - auto sizes based on image aspect ratio */}
+          <div
+            className="relative w-full rounded-2xl overflow-hidden shadow-2xl bg-white dark:bg-black"
+            style={{ aspectRatio: slideAspect ?? '16 / 9', maxHeight: '75vh' }}
+          >
             <AnimatePresence mode="wait">
               <motion.div
                 key={currentSlide}
@@ -148,29 +171,29 @@ const Gallery: React.FC = () => {
                 className="absolute inset-0"
               >
                 <img
-                  src={slideshowData[currentSlide].src}
+                  src={encodeImagePath(slideshowData[currentSlide].src)}
                   alt={slideshowData[currentSlide].alt}
-                  className="w-full h-full object-contain bg-gray-100 dark:bg-gray-900"
+                  className="w-full h-full object-contain"
+                  onLoad={(e) => {
+                    const img = e.currentTarget as HTMLImageElement;
+                    if (img.naturalWidth && img.naturalHeight) {
+                      setSlideAspect(`${img.naturalWidth} / ${img.naturalHeight}`);
+                    }
+                  }}
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
                     target.src = 'https://images.pexels.com/photos/587741/pexels-photo-587741.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop';
                   }}
                 />
                 
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
+                {/* Bottom Overlay only (avoid full-frame dark bands) */}
+                <div className="absolute bottom-0 left-0 right-0 h-1/3 md:h-1/4 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
                 
                 {/* Content */}
                 <div className="absolute bottom-0 left-0 right-0 p-8 text-white pointer-events-none">
                   <div className="bg-amber-400 text-black px-4 py-2 rounded-full text-sm font-medium inline-block mb-4">
                     {slideshowData[currentSlide].category}
                   </div>
-                  <h3 className="text-3xl md:text-4xl font-bold mb-3">
-                    {slideshowData[currentSlide].alt}
-                  </h3>
-                  <p className="text-lg text-gray-200 max-w-2xl">
-                    {slideshowData[currentSlide].description}
-                  </p>
                 </div>
               </motion.div>
             </AnimatePresence>
@@ -298,7 +321,7 @@ const Gallery: React.FC = () => {
               onClick={() => handleCategoryClick(image.category)}
             >
               <motion.img
-                src={image.src}
+                src={encodeImagePath(image.src)}
                 alt={image.alt}
                 className="w-full h-64 object-cover block"
                 loading="lazy"
@@ -315,13 +338,10 @@ const Gallery: React.FC = () => {
               
               {/* Always Visible Content */}
               <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                <div className="bg-amber-400 text-black px-3 py-1 rounded-full text-sm font-medium inline-block mb-2">
+                <div className="bg-amber-400 text-black px-3 py-1 rounded-full text-sm font-medium inline-block">
                   {image.category}
                 </div>
-                <h3 className="font-semibold text-lg mb-2">
-                  {image.alt}
-                </h3>
-                <div className="flex items-center gap-2 text-sm text-gray-200">
+                <div className="flex items-center gap-2 text-sm text-gray-200 mt-2">
                   <span>Click to view all</span>
                   <ArrowRight className="h-4 w-4" />
                 </div>
@@ -361,7 +381,7 @@ const Gallery: React.FC = () => {
               onClick={(e) => e.stopPropagation()}
             >
               <motion.img
-                src={portfolioData[selectedImage].src}
+                src={encodeImagePath(portfolioData[selectedImage].src)}
                 alt={portfolioData[selectedImage].alt}
                 className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
                 initial={{ scale: 0.9 }}
@@ -407,10 +427,9 @@ const Gallery: React.FC = () => {
 
                 {/* Image Info */}
               <div className="absolute bottom-4 left-4 text-white max-w-md z-[10000]">
-                <div className="bg-amber-400 text-black px-4 py-2 rounded-full text-sm font-medium inline-block mb-3">
+                <div className="bg-amber-400 text-black px-4 py-2 rounded-full text-sm font-medium inline-block">
                   {portfolioData[selectedImage].category}
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{portfolioData[selectedImage].alt}</h3>
               </div>
             </motion.div>
             </motion.div>

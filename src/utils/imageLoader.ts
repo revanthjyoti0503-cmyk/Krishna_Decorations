@@ -9,6 +9,29 @@ export interface OptimizedImageProps {
   onError?: () => void;
 }
 
+export const encodeImagePath = (src: string): string => {
+  if (!src) return src;
+  if (/^https?:\/\//i.test(src)) return src;
+  const match = src.match(/([^?#]*)([?#].*)?/);
+  const path = match?.[1] ?? src;
+  const suffix = match?.[2] ?? '';
+  const hasLeadingSlash = path.startsWith('/');
+  const encodedPath = path
+    .split('/')
+    .filter(Boolean)
+    .map(segment => encodeURIComponent(segment))
+    .join('/');
+  const leading = hasLeadingSlash ? '/' : '';
+  const base = (import.meta as any)?.env?.BASE_URL || '/';
+  const normalizedBase = String(base).endsWith('/') ? String(base).slice(0, -1) : String(base);
+  const isFile = typeof window !== 'undefined' && window.location && window.location.protocol === 'file:';
+  if (isFile) {
+    // Use relative path for file:// to avoid root resolution issues
+    return `${encodedPath}${suffix}`;
+  }
+  return `${normalizedBase}${leading}${encodedPath}${suffix}`;
+};
+
 export const useImageLoader = (src: string) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -16,19 +39,38 @@ export const useImageLoader = (src: string) => {
 
   useEffect(() => {
     if (!src) return;
+    let cancelled = false;
 
-    const img = new Image();
-    
-    img.onload = () => {
-      setIsLoaded(true);
-      setImageSrc(src);
+    const attemptLoad = (candidateSrcs: string[]) => {
+      const tryNext = () => {
+        const next = candidateSrcs.shift();
+        if (!next) {
+          if (!cancelled) setHasError(true);
+          return;
+        }
+        const img = new Image();
+        img.onload = () => {
+          if (cancelled) return;
+          setIsLoaded(true);
+          setImageSrc(next);
+        };
+        img.onerror = () => {
+          if (cancelled) return;
+          tryNext();
+        };
+        img.src = next;
+      };
+      tryNext();
     };
-    
-    img.onerror = () => {
-      setHasError(true);
+
+    const encoded = encodeImagePath(src);
+    const raw = src;
+    const spaceToPct = src.replace(/ /g, '%20');
+    attemptLoad([encoded, raw, spaceToPct]);
+
+    return () => {
+      cancelled = true;
     };
-    
-    img.src = src;
   }, [src]);
 
   return { isLoaded, hasError, imageSrc };

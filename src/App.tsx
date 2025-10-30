@@ -9,7 +9,7 @@ import HashHandler from './components/Layout/HashHandler';
 // Lazy load pages for better performance
 const Home = React.lazy(() => import('./pages/Home'));
 const Gallery = React.lazy(() => import('./pages/GalleryOptimized'));
-const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
+// const ServicesPage = React.lazy(() => import('./pages/ServicesPage'));
 
 // Loading component
 const PageLoader = () => (
@@ -31,7 +31,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/gallery" element={<Gallery />} />
-                <Route path="/services" element={<ServicesPage />} />
+                {/* Services page removed */}
               </Routes>
             </Suspense>
           </main>

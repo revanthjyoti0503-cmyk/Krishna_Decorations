@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Send, Phone, Mail, MapPin, Instagram } from 'lucide-react';
 import ContactForm from '../ContactForm';
 
 const Contact: React.FC = () => {
@@ -8,26 +8,20 @@ const Contact: React.FC = () => {
     {
       icon: Phone,
       title: 'Phone',
-      details: '+1 (555) 123-4567',
-      description: 'Call us anytime'
+      details: '+91 9021363789, +91 8329769697, 7744990687',
+      description: 'Call us for bookings and inquiries'
     },
     {
       icon: Mail,
       title: 'Email',
-      details: 'info@krishnaevents.com',
+      details: 'krishnadecoraction@gmail.com',
       description: 'Send us an email'
     },
     {
       icon: MapPin,
       title: 'Address',
-      details: '123 Event Street, City, State 12345',
+      details: 'Shakar Peth, Solapur',
       description: 'Visit our office'
-    },
-    {
-      icon: Clock,
-      title: 'Working Hours',
-      details: 'Mon - Fri: 9AM - 6PM',
-      description: 'We\'re here to help'
     },
   ];
 
@@ -132,23 +126,20 @@ const Contact: React.FC = () => {
               transition={{ duration: 0.5, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
               className="pt-6"
             >
-              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">
-                Follow Us
-              </h4>
+              <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Follow Us</h4>
               <div className="flex space-x-4">
-                {['Facebook', 'Instagram', 'Twitter', 'LinkedIn'].map((platform) => (
-                  <motion.button
-                    key={platform}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    transition={{ duration: 0.2 }}
-                    className="w-10 h-10 bg-amber-400/20 rounded-full flex items-center justify-center hover:bg-amber-400/30 transition-colors duration-300"
-                  >
-                    <span className="text-amber-400 font-medium text-sm">
-                      {platform.charAt(0)}
-                    </span>
-                  </motion.button>
-                ))}
+                <motion.a
+                  href="https://www.instagram.com/krishna__events_solapur/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  transition={{ duration: 0.2 }}
+                  className="w-10 h-10 bg-amber-400/20 rounded-full flex items-center justify-center hover:bg-amber-400/30 transition-colors duration-300"
+                >
+                  <Instagram className="h-5 w-5 text-amber-400" />
+                </motion.a>
               </div>
             </motion.div>
           </motion.div>
